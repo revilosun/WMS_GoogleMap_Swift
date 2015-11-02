@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		87F457051BE7948300D08AD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F457041BE7948300D08AD4 /* AppDelegate.swift */; };
+		87F457071BE7948300D08AD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F457061BE7948300D08AD4 /* ViewController.swift */; };
+		87F4570A1BE7948300D08AD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F457081BE7948300D08AD4 /* Main.storyboard */; };
+		87F4570C1BE7948300D08AD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87F4570B1BE7948300D08AD4 /* Assets.xcassets */; };
+		87F4570F1BE7948300D08AD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F4570D1BE7948300D08AD4 /* LaunchScreen.storyboard */; };
+		87F4571A1BE7948300D08AD4 /* WmsTileLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F457191BE7948300D08AD4 /* WmsTileLayerTests.swift */; };
+		87F457251BE7948300D08AD4 /* WmsTileLayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F457241BE7948300D08AD4 /* WmsTileLayerUITests.swift */; };
+		87F457331BE79F7400D08AD4 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = 87F457321BE79F7400D08AD4 /* podfile */; settings = {ASSET_TAGS = (); }; };
+		87F457351BE79FCE00D08AD4 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F457341BE79FCE00D08AD4 /* GoogleMaps.framework */; };
+		87F4573A1BE7A2C600D08AD4 /* WmsTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F457391BE7A2C600D08AD4 /* WmsTileOverlay.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		87F457161BE7948300D08AD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87F456F91BE7948300D08AD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87F457001BE7948300D08AD4;
+			remoteInfo = WmsTileLayer;
+		};
+		87F457211BE7948300D08AD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87F456F91BE7948300D08AD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87F457001BE7948300D08AD4;
+			remoteInfo = WmsTileLayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		87F457011BE7948300D08AD4 /* WmsTileLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WmsTileLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87F457041BE7948300D08AD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		87F457061BE7948300D08AD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		87F457091BE7948300D08AD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		87F4570B1BE7948300D08AD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87F4570E1BE7948300D08AD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		87F457101BE7948300D08AD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87F457151BE7948300D08AD4 /* WmsTileLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WmsTileLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87F457191BE7948300D08AD4 /* WmsTileLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WmsTileLayerTests.swift; sourceTree = "<group>"; };
+		87F4571B1BE7948300D08AD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87F457201BE7948300D08AD4 /* WmsTileLayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WmsTileLayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87F457241BE7948300D08AD4 /* WmsTileLayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WmsTileLayerUITests.swift; sourceTree = "<group>"; };
+		87F457261BE7948300D08AD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87F457321BE79F7400D08AD4 /* podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; };
+		87F457341BE79FCE00D08AD4 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Pods/GoogleMaps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		87F457361BE7A0DF00D08AD4 /* WmsTileLayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WmsTileLayer-Bridging-Header.h"; sourceTree = "<group>"; };
+		87F457391BE7A2C600D08AD4 /* WmsTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WmsTileOverlay.swift; sourceTree = "<group>"; };
+		8AFAC477239C18A09F239706 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		EFB3D01AAAAA2ED87944E5EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87F456FE1BE7948300D08AD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87F457351BE79FCE00D08AD4 /* GoogleMaps.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87F457121BE7948300D08AD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87F4571D1BE7948300D08AD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4CD33588137E01A91A346447 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFB3D01AAAAA2ED87944E5EA /* Pods.debug.xcconfig */,
+				8AFAC477239C18A09F239706 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		87D0B73E4217F24E045BDA02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87F457341BE79FCE00D08AD4 /* GoogleMaps.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		87F456F81BE7948300D08AD4 = {
+			isa = PBXGroup;
+			children = (
+				87F457321BE79F7400D08AD4 /* podfile */,
+				87F457031BE7948300D08AD4 /* WmsTileLayer */,
+				87F457181BE7948300D08AD4 /* WmsTileLayerTests */,
+				87F457231BE7948300D08AD4 /* WmsTileLayerUITests */,
+				87F457021BE7948300D08AD4 /* Products */,
+				4CD33588137E01A91A346447 /* Pods */,
+				87D0B73E4217F24E045BDA02 /* Frameworks */,
+				87F457361BE7A0DF00D08AD4 /* WmsTileLayer-Bridging-Header.h */,
+			);
+			sourceTree = "<group>";
+		};
+		87F457021BE7948300D08AD4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87F457011BE7948300D08AD4 /* WmsTileLayer.app */,
+				87F457151BE7948300D08AD4 /* WmsTileLayerTests.xctest */,
+				87F457201BE7948300D08AD4 /* WmsTileLayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87F457031BE7948300D08AD4 /* WmsTileLayer */ = {
+			isa = PBXGroup;
+			children = (
+				87F457041BE7948300D08AD4 /* AppDelegate.swift */,
+				87F457061BE7948300D08AD4 /* ViewController.swift */,
+				87F457391BE7A2C600D08AD4 /* WmsTileOverlay.swift */,
+				87F457081BE7948300D08AD4 /* Main.storyboard */,
+				87F4570B1BE7948300D08AD4 /* Assets.xcassets */,
+				87F4570D1BE7948300D08AD4 /* LaunchScreen.storyboard */,
+				87F457101BE7948300D08AD4 /* Info.plist */,
+			);
+			path = WmsTileLayer;
+			sourceTree = "<group>";
+		};
+		87F457181BE7948300D08AD4 /* WmsTileLayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				87F457191BE7948300D08AD4 /* WmsTileLayerTests.swift */,
+				87F4571B1BE7948300D08AD4 /* Info.plist */,
+			);
+			path = WmsTileLayerTests;
+			sourceTree = "<group>";
+		};
+		87F457231BE7948300D08AD4 /* WmsTileLayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				87F457241BE7948300D08AD4 /* WmsTileLayerUITests.swift */,
+				87F457261BE7948300D08AD4 /* Info.plist */,
+			);
+			path = WmsTileLayerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		87F457001BE7948300D08AD4 /* WmsTileLayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87F457291BE7948300D08AD4 /* Build configuration list for PBXNativeTarget "WmsTileLayer" */;
+			buildPhases = (
+				543744D7E4094B282DB6C153 /* Check Pods Manifest.lock */,
+				87F456FD1BE7948300D08AD4 /* Sources */,
+				87F456FE1BE7948300D08AD4 /* Frameworks */,
+				87F456FF1BE7948300D08AD4 /* Resources */,
+				E4AECA88827FBC1B0386F07E /* Embed Pods Frameworks */,
+				F4D9C518E03D7E429A10AD1B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WmsTileLayer;
+			productName = WmsTileLayer;
+			productReference = 87F457011BE7948300D08AD4 /* WmsTileLayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		87F457141BE7948300D08AD4 /* WmsTileLayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87F4572C1BE7948300D08AD4 /* Build configuration list for PBXNativeTarget "WmsTileLayerTests" */;
+			buildPhases = (
+				87F457111BE7948300D08AD4 /* Sources */,
+				87F457121BE7948300D08AD4 /* Frameworks */,
+				87F457131BE7948300D08AD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87F457171BE7948300D08AD4 /* PBXTargetDependency */,
+			);
+			name = WmsTileLayerTests;
+			productName = WmsTileLayerTests;
+			productReference = 87F457151BE7948300D08AD4 /* WmsTileLayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		87F4571F1BE7948300D08AD4 /* WmsTileLayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87F4572F1BE7948300D08AD4 /* Build configuration list for PBXNativeTarget "WmsTileLayerUITests" */;
+			buildPhases = (
+				87F4571C1BE7948300D08AD4 /* Sources */,
+				87F4571D1BE7948300D08AD4 /* Frameworks */,
+				87F4571E1BE7948300D08AD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87F457221BE7948300D08AD4 /* PBXTargetDependency */,
+			);
+			name = WmsTileLayerUITests;
+			productName = WmsTileLayerUITests;
+			productReference = 87F457201BE7948300D08AD4 /* WmsTileLayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		87F456F91BE7948300D08AD4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					87F457001BE7948300D08AD4 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					87F457141BE7948300D08AD4 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 87F457001BE7948300D08AD4;
+					};
+					87F4571F1BE7948300D08AD4 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 87F457001BE7948300D08AD4;
+					};
+				};
+			};
+			buildConfigurationList = 87F456FC1BE7948300D08AD4 /* Build configuration list for PBXProject "WmsTileLayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 87F456F81BE7948300D08AD4;
+			productRefGroup = 87F457021BE7948300D08AD4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87F457001BE7948300D08AD4 /* WmsTileLayer */,
+				87F457141BE7948300D08AD4 /* WmsTileLayerTests */,
+				87F4571F1BE7948300D08AD4 /* WmsTileLayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		87F456FF1BE7948300D08AD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87F4570F1BE7948300D08AD4 /* LaunchScreen.storyboard in Resources */,
+				87F4570C1BE7948300D08AD4 /* Assets.xcassets in Resources */,
+				87F457331BE79F7400D08AD4 /* podfile in Resources */,
+				87F4570A1BE7948300D08AD4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87F457131BE7948300D08AD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87F4571E1BE7948300D08AD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		543744D7E4094B282DB6C153 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E4AECA88827FBC1B0386F07E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4D9C518E03D7E429A10AD1B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		87F456FD1BE7948300D08AD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87F4573A1BE7A2C600D08AD4 /* WmsTileOverlay.swift in Sources */,
+				87F457071BE7948300D08AD4 /* ViewController.swift in Sources */,
+				87F457051BE7948300D08AD4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87F457111BE7948300D08AD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87F4571A1BE7948300D08AD4 /* WmsTileLayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87F4571C1BE7948300D08AD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87F457251BE7948300D08AD4 /* WmsTileLayerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		87F457171BE7948300D08AD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87F457001BE7948300D08AD4 /* WmsTileLayer */;
+			targetProxy = 87F457161BE7948300D08AD4 /* PBXContainerItemProxy */;
+		};
+		87F457221BE7948300D08AD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87F457001BE7948300D08AD4 /* WmsTileLayer */;
+			targetProxy = 87F457211BE7948300D08AD4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		87F457081BE7948300D08AD4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87F457091BE7948300D08AD4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		87F4570D1BE7948300D08AD4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87F4570E1BE7948300D08AD4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		87F457271BE7948300D08AD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87F457281BE7948300D08AD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		87F4572A1BE7948300D08AD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFB3D01AAAAA2ED87944E5EA /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/GoogleMaps/Frameworks",
+				);
+				INFOPLIST_FILE = WmsTileLayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.nassweb.WmsTileLayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WmsTileLayer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		87F4572B1BE7948300D08AD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AFAC477239C18A09F239706 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/GoogleMaps/Frameworks",
+				);
+				INFOPLIST_FILE = WmsTileLayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.nassweb.WmsTileLayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WmsTileLayer-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		87F4572D1BE7948300D08AD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WmsTileLayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.nassweb.WmsTileLayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WmsTileLayer.app/WmsTileLayer";
+			};
+			name = Debug;
+		};
+		87F4572E1BE7948300D08AD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WmsTileLayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.nassweb.WmsTileLayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WmsTileLayer.app/WmsTileLayer";
+			};
+			name = Release;
+		};
+		87F457301BE7948300D08AD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WmsTileLayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.nassweb.WmsTileLayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WmsTileLayer;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		87F457311BE7948300D08AD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WmsTileLayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.nassweb.WmsTileLayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WmsTileLayer;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		87F456FC1BE7948300D08AD4 /* Build configuration list for PBXProject "WmsTileLayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87F457271BE7948300D08AD4 /* Debug */,
+				87F457281BE7948300D08AD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87F457291BE7948300D08AD4 /* Build configuration list for PBXNativeTarget "WmsTileLayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87F4572A1BE7948300D08AD4 /* Debug */,
+				87F4572B1BE7948300D08AD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87F4572C1BE7948300D08AD4 /* Build configuration list for PBXNativeTarget "WmsTileLayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87F4572D1BE7948300D08AD4 /* Debug */,
+				87F4572E1BE7948300D08AD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87F4572F1BE7948300D08AD4 /* Build configuration list for PBXNativeTarget "WmsTileLayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87F457301BE7948300D08AD4 /* Debug */,
+				87F457311BE7948300D08AD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 87F456F91BE7948300D08AD4 /* Project object */;
+}
