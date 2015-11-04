@@ -5,9 +5,10 @@ This code is translate from https://github.com/Sumbera/WMS_iOS_GoogleMapSDK writ
 
 
 Requirements:
-GoogleMaps 1.10.4
-Swift 2.0 (XCode 7)
-pod
+
+- GoogleMaps 1.10.4
+- Swift 2.0 (XCode 7)
+- pod
 
 
 To use:
