@@ -12,8 +12,6 @@
 		87F4570A1BE7948300D08AD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F457081BE7948300D08AD4 /* Main.storyboard */; };
 		87F4570C1BE7948300D08AD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87F4570B1BE7948300D08AD4 /* Assets.xcassets */; };
 		87F4570F1BE7948300D08AD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F4570D1BE7948300D08AD4 /* LaunchScreen.storyboard */; };
-		87F457331BE79F7400D08AD4 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = 87F457321BE79F7400D08AD4 /* podfile */; settings = {ASSET_TAGS = (); }; };
-		87F457351BE79FCE00D08AD4 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F457341BE79FCE00D08AD4 /* GoogleMaps.framework */; };
 		87F4573A1BE7A2C600D08AD4 /* WmsTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F457391BE7A2C600D08AD4 /* WmsTileOverlay.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -35,21 +33,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		87F457011BE7948300D08AD4 /* WmsTileLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WmsTileLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87F457011BE7948300D08AD4 /* WmsTileLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = WmsTileLayer.app; path = "/Users/onass/Documents/WMS_GoogleMap_Swift/WMS_GoogleMap_Swift/build/Debug-iphoneos/WmsTileLayer.app"; sourceTree = "<absolute>"; };
 		87F457041BE7948300D08AD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87F457061BE7948300D08AD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		87F457091BE7948300D08AD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		87F4570B1BE7948300D08AD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87F4570E1BE7948300D08AD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87F457101BE7948300D08AD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		87F457151BE7948300D08AD4 /* WmsTileLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WmsTileLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		87F457201BE7948300D08AD4 /* WmsTileLayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WmsTileLayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		87F457321BE79F7400D08AD4 /* podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; };
-		87F457341BE79FCE00D08AD4 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Pods/GoogleMaps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		87F457151BE7948300D08AD4 /* WmsTileLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = WmsTileLayerTests.xctest; path = "/Users/onass/Documents/WMS_GoogleMap_Swift/WMS_GoogleMap_Swift/build/Debug-iphoneos/WmsTileLayerTests.xctest"; sourceTree = "<absolute>"; };
+		87F457201BE7948300D08AD4 /* WmsTileLayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = WmsTileLayerUITests.xctest; path = "/Users/onass/Documents/WMS_GoogleMap_Swift/WMS_GoogleMap_Swift/build/Debug-iphoneos/WmsTileLayerUITests.xctest"; sourceTree = "<absolute>"; };
 		87F457361BE7A0DF00D08AD4 /* WmsTileLayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WmsTileLayer-Bridging-Header.h"; sourceTree = "<group>"; };
 		87F457391BE7A2C600D08AD4 /* WmsTileOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WmsTileOverlay.swift; sourceTree = "<group>"; };
-		8AFAC477239C18A09F239706 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		EFB3D01AAAAA2ED87944E5EA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +51,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87F457351BE79FCE00D08AD4 /* GoogleMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,43 +71,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4CD33588137E01A91A346447 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				EFB3D01AAAAA2ED87944E5EA /* Pods.debug.xcconfig */,
-				8AFAC477239C18A09F239706 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		87D0B73E4217F24E045BDA02 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				87F457341BE79FCE00D08AD4 /* GoogleMaps.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		87F456F81BE7948300D08AD4 = {
 			isa = PBXGroup;
 			children = (
-				87F457321BE79F7400D08AD4 /* podfile */,
 				87F457031BE7948300D08AD4 /* WmsTileLayer */,
-				87F457021BE7948300D08AD4 /* Products */,
-				4CD33588137E01A91A346447 /* Pods */,
-				87D0B73E4217F24E045BDA02 /* Frameworks */,
 				87F457361BE7A0DF00D08AD4 /* WmsTileLayer-Bridging-Header.h */,
 			);
-			sourceTree = "<group>";
-		};
-		87F457021BE7948300D08AD4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				87F457011BE7948300D08AD4 /* WmsTileLayer.app */,
-				87F457151BE7948300D08AD4 /* WmsTileLayerTests.xctest */,
-				87F457201BE7948300D08AD4 /* WmsTileLayerUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		87F457031BE7948300D08AD4 /* WmsTileLayer */ = {
@@ -221,7 +183,7 @@
 				Base,
 			);
 			mainGroup = 87F456F81BE7948300D08AD4;
-			productRefGroup = 87F457021BE7948300D08AD4 /* Products */;
+			productRefGroup = 87F456F81BE7948300D08AD4;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -239,7 +201,6 @@
 			files = (
 				87F4570F1BE7948300D08AD4 /* LaunchScreen.storyboard in Resources */,
 				87F4570C1BE7948300D08AD4 /* Assets.xcassets in Resources */,
-				87F457331BE79F7400D08AD4 /* podfile in Resources */,
 				87F4570A1BE7948300D08AD4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,7 +416,6 @@
 		};
 		87F4572A1BE7948300D08AD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFB3D01AAAAA2ED87944E5EA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -475,7 +435,6 @@
 		};
 		87F4572B1BE7948300D08AD4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AFAC477239C18A09F239706 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
