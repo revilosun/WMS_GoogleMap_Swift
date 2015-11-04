@@ -12,8 +12,6 @@
 		87F4570A1BE7948300D08AD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F457081BE7948300D08AD4 /* Main.storyboard */; };
 		87F4570C1BE7948300D08AD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87F4570B1BE7948300D08AD4 /* Assets.xcassets */; };
 		87F4570F1BE7948300D08AD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F4570D1BE7948300D08AD4 /* LaunchScreen.storyboard */; };
-		87F4571A1BE7948300D08AD4 /* WmsTileLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F457191BE7948300D08AD4 /* WmsTileLayerTests.swift */; };
-		87F457251BE7948300D08AD4 /* WmsTileLayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F457241BE7948300D08AD4 /* WmsTileLayerUITests.swift */; };
 		87F457331BE79F7400D08AD4 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = 87F457321BE79F7400D08AD4 /* podfile */; settings = {ASSET_TAGS = (); }; };
 		87F457351BE79FCE00D08AD4 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F457341BE79FCE00D08AD4 /* GoogleMaps.framework */; };
 		87F4573A1BE7A2C600D08AD4 /* WmsTileOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F457391BE7A2C600D08AD4 /* WmsTileOverlay.swift */; settings = {ASSET_TAGS = (); }; };
@@ -45,11 +43,7 @@
 		87F4570E1BE7948300D08AD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87F457101BE7948300D08AD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87F457151BE7948300D08AD4 /* WmsTileLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WmsTileLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		87F457191BE7948300D08AD4 /* WmsTileLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WmsTileLayerTests.swift; sourceTree = "<group>"; };
-		87F4571B1BE7948300D08AD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87F457201BE7948300D08AD4 /* WmsTileLayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WmsTileLayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		87F457241BE7948300D08AD4 /* WmsTileLayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WmsTileLayerUITests.swift; sourceTree = "<group>"; };
-		87F457261BE7948300D08AD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87F457321BE79F7400D08AD4 /* podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; };
 		87F457341BE79FCE00D08AD4 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Pods/GoogleMaps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
 		87F457361BE7A0DF00D08AD4 /* WmsTileLayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WmsTileLayer-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -106,8 +100,6 @@
 			children = (
 				87F457321BE79F7400D08AD4 /* podfile */,
 				87F457031BE7948300D08AD4 /* WmsTileLayer */,
-				87F457181BE7948300D08AD4 /* WmsTileLayerTests */,
-				87F457231BE7948300D08AD4 /* WmsTileLayerUITests */,
 				87F457021BE7948300D08AD4 /* Products */,
 				4CD33588137E01A91A346447 /* Pods */,
 				87D0B73E4217F24E045BDA02 /* Frameworks */,
@@ -137,24 +129,6 @@
 				87F457101BE7948300D08AD4 /* Info.plist */,
 			);
 			path = WmsTileLayer;
-			sourceTree = "<group>";
-		};
-		87F457181BE7948300D08AD4 /* WmsTileLayerTests */ = {
-			isa = PBXGroup;
-			children = (
-				87F457191BE7948300D08AD4 /* WmsTileLayerTests.swift */,
-				87F4571B1BE7948300D08AD4 /* Info.plist */,
-			);
-			path = WmsTileLayerTests;
-			sourceTree = "<group>";
-		};
-		87F457231BE7948300D08AD4 /* WmsTileLayerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				87F457241BE7948300D08AD4 /* WmsTileLayerUITests.swift */,
-				87F457261BE7948300D08AD4 /* Info.plist */,
-			);
-			path = WmsTileLayerUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,7 +323,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87F4571A1BE7948300D08AD4 /* WmsTileLayerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +330,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87F457251BE7948300D08AD4 /* WmsTileLayerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
