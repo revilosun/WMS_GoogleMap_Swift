@@ -20,6 +20,7 @@ To use:
 - Modify the URL for the Geoserver in ViewController.swift
 
 To compile:
+
 Build Settings:
-Enable BitCode = No
-Other Linker Flags: -ObjC
+- Enable BitCode = No
+- Other Linker Flags: -ObjC
