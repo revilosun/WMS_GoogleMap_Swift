@@ -18,7 +18,7 @@ To use:
 - Create the Bridging-Header File
 - Add your API key for GoogleMaps in AppDelegate.swift
 - Modify the URL for the Geoserver in ViewController.swift
-- 
+
 To compile:
 Build Settings:
 Enable BitCode = No
