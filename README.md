@@ -25,3 +25,6 @@ To compile:
 Build Settings:
 - Enable BitCode = No
 - Other Linker Flags: -ObjC
+
+Remarks:
+On the simulator, the background outside of the image is white. On the device, it looks perfect (Bug?).
