@@ -29,12 +29,6 @@ Build Settings:
 
 Remarks:
 
-On the simulator, the background outside of the image is white-transparent. On the device, it looks perfect (Bug?).
-Example:
-https://www.dropbox.com/s/54fk58klpqxw1fu/iOS%20Simulator%20Screen%20Shot%2021.09.2015%2011.22.52.png?dl=0
-
-https://www.dropbox.com/s/on1h793jiyf6bpl/Screen%20Shot%202015-09-21%20at%2011.23.33.png?dl=0
-
 
 Third Part Licence:<br>
 GoogleMaps SDK for iOS <br>https://developers.google.com/maps/terms
