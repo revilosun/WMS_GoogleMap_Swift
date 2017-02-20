@@ -34,8 +34,8 @@ Third Part Licence:<br>
 GoogleMaps SDK for iOS <br>https://developers.google.com/maps/terms
 
 
-UPDATE: Convert from Swift 2.0 to Swift 3.0
-If "compiled error (newer version of Swift language (3.0) than previous files ( Swift 2.0)) with linker command", you must update your pod with:
+UPDATE: Convert from Swift 2.0 to Swift 3.0.
+If "compiled error (newer version of Swift language (3.0) than previous files ( Swift 2.0)) with linker command", you must to do next steps:
 - run command "pod update".
 - clean the project in XCode8, then exit the programm
 - delete the DerivedData Folder and then build your project again
