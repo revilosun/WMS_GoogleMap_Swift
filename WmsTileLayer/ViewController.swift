@@ -13,7 +13,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
-        mapview.myLocationEnabled = true
+        mapview.isMyLocationEnabled = true
         mapview.settings.myLocationButton = true
         
         url = ""
@@ -39,26 +39,26 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         // Implement GMSTileURLConstructor
         // Returns a Tile based on the x,y,zoom coordinates, and the requested floor
-        let urls: GMSTileURLConstructor = { (x: UInt, y: UInt, zoom: UInt) -> NSURL in
+        let urls: GMSTileURLConstructor = { (x: UInt, y: UInt, zoom: UInt) -> URL in
             let bbox = self.layer.bboxFromXYZ(x, y: y, z: zoom)
             let urlKN = "https://__GEOSERVER__?LAYERS=__LAYER__&STYLES=&SERVICE=WMS&VERSION=1.3&REQUEST=GetMap&SRS=EPSG:900913&width=256&height=256&format=image/png&transparent=true&BBOX=\(bbox.left),\(bbox.bottom),\(bbox.right),\(bbox.top)"
 
-            return NSURL(string: urlKN)!
+            return URL(string: urlKN)!
         }
         
-        let tileLayer = GMSURLTileLayer(URLConstructor: urls)
-        tileLayer.opacity = 0.75
+        let tileLayer = GMSURLTileLayer(urlConstructor: urls)
+        tileLayer?.opacity = 0.75
         
-        tileLayer.map = nil
-        tileLayer.map = mapview
+        tileLayer?.map = nil
+        tileLayer?.map = mapview
     }
 
     
-    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        if status == CLAuthorizationStatus.AuthorizedWhenInUse {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == CLAuthorizationStatus.authorizedWhenInUse {
             locationManager.startUpdatingLocation()
             
-            mapview.myLocationEnabled = true
+            mapview.isMyLocationEnabled = true
             mapview.settings.myLocationButton = true
         }
     }
