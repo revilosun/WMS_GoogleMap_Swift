@@ -2,11 +2,11 @@ import Foundation
 
 extension String {
     
-    func stringByAppendingPathComponent(path: String) -> String {
+    func stringByAppendingPathComponent(_ path: String) -> String {
         
         let nsSt = self as NSString
         
-        return nsSt.stringByAppendingPathComponent(path)
+        return nsSt.appendingPathComponent(path)
     }
 }
 
@@ -36,58 +36,56 @@ class WMSTileOverlay: GMSTileLayer {
         let top: Double
     }
     
-    func bboxFromXYZ(x: UInt, y: UInt, z: UInt) -> BBox {
+    func bboxFromXYZ(_ x: UInt, y: UInt, z: UInt) -> BBox {
         let bbox = BBox(left: mercatorXofLongitude(xOfColumn(x,zoom: z)), bottom: mercatorYofLatitude(yOfRow(y+1,zoom: z)), right: mercatorXofLongitude(xOfColumn(x+1,zoom: z)), top: mercatorYofLatitude(yOfRow(y,zoom: z)))
         return bbox
     }
     
-    func xOfColumn(column: UInt, zoom: UInt) -> Double {
+    func xOfColumn(_ column: UInt, zoom: UInt) -> Double {
         let x = Double(column)
         let z = Double(zoom)
         return x / pow(2.0, z) * 360.0 - 180
     }
     
-    func yOfRow(row: UInt, zoom: UInt) -> Double {
+    func yOfRow(_ row: UInt, zoom: UInt) -> Double {
         let y = Double(row)
         let z = Double(zoom)
         let n = M_PI - 2.0 * M_PI * y / pow(2.0, z)
         return 180.0 / M_PI * atan(0.5 * (exp(n) - exp(-n)))
     }
     
-    func mercatorXofLongitude(lon: Double) -> Double {
+    func mercatorXofLongitude(_ lon: Double) -> Double {
         return lon * 20037508.34 / 180
     }
     
-    func mercatorYofLatitude(lat: Double) -> Double {
+    func mercatorYofLatitude(_ lat: Double) -> Double {
         var y = log(tan((90 + lat) * M_PI / 360)) / (M_PI / 180)
         y = y * 20037508.34 / 180
         return y
     }
     
-    func md5Hash(stringData: NSString) -> NSString {
-        let str = stringData.cStringUsingEncoding(NSUTF8StringEncoding)
-        let strLen = CUnsignedInt(stringData.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
+    func md5Hash(_ string: String) -> String {
         
-        let digestLen = Int(CC_MD5_DIGEST_LENGTH)
-        let result = UnsafeMutablePointer<CUnsignedChar>.alloc(digestLen)
-        CC_MD5(str, strLen, result)
-        
-        let hash = NSMutableString()
-        for i in 0..<digestLen {
-            hash.appendFormat("%02x", result[i])
+        let context = UnsafeMutablePointer<CC_MD5_CTX>.allocate(capacity: 1)
+        var digest = Array<UInt8>(repeating:0, count:Int(CC_MD5_DIGEST_LENGTH))
+        CC_MD5_Init(context)
+        CC_MD5_Update(context, string, CC_LONG(string.lengthOfBytes(using: String.Encoding.utf8)))
+        CC_MD5_Final(&digest, context)
+        context.deallocate(capacity: 1)
+        var hexString = ""
+        for byte in digest {
+            hexString += String(format:"%02x", byte)
         }
         
-        result.dealloc(digestLen)
-        
-        return String(format: hash as String)
+        return hexString
     }
     
-    func createPathIfNecessary(path: String) -> Bool {
+    func createPathIfNecessary(_ path: String) -> Bool {
         var succeeded = true
-        let fm = NSFileManager.defaultManager()
-        if(!fm.fileExistsAtPath(path)) {
+        let fm = FileManager.default
+        if(!fm.fileExists(atPath: path)) {
             do {
-                try fm.createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil)
+                try fm.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
                 succeeded = true
             } catch _ {
                 succeeded = false
@@ -96,47 +94,51 @@ class WMSTileOverlay: GMSTileLayer {
         return succeeded
     }
     
-    func cachePathWithName(name: String) -> String {
-        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
+    func cachePathWithName(_ name: String) -> String {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
         let cachesPath: String = paths as String
         let cachePath = name.stringByAppendingPathComponent(cachesPath)
-        createPathIfNecessary(cachesPath)
-        createPathIfNecessary(cachePath)
+        var succeeded = false
+        succeeded = createPathIfNecessary(cachesPath)
+        succeeded = createPathIfNecessary(cachePath)
+        if succeeded == false {
+            print("Cannot create cachePath WMSTileOverlay")
+        }
         
         return cachePath
     }
     
     
-    func getFilePathForURL(url: NSURL, folderName: String) -> String {
-        return cachePathWithName(folderName).stringByAppendingPathComponent(md5Hash("\(url)") as String)
+    func getFilePathForURL(_ url: URL, folderName: String) -> String {
+        return cachePathWithName(folderName).stringByAppendingPathComponent(md5Hash("\(url)" as String) as String)
     }
     
-    func cacheUrlToLocalFolder(url: NSURL, data: NSData, folderName: String) {
+    func cacheUrlToLocalFolder(_ url: URL, data: Data, folderName: String) {
         let localFilePath = getFilePathForURL(url, folderName: folderName)
-        data.writeToFile(localFilePath, atomically: true)
+        try? data.write(to: URL(fileURLWithPath: localFilePath), options: [.atomic])
     }
     
     // MapViewUtils END ************
     
     
-    func tileLoad(url: String, online: Bool) -> UIImage {
-        let url1 = NSURL(string: url)!
+    func tileLoad(_ url: String, online: Bool) -> UIImage {
+        let url1 = URL(string: url)!
         let filePath = getFilePathForURL(url1, folderName: TILE_CACHE)
         // check if cached
-        let file = NSFileManager.defaultManager()
-        if file.fileExistsAtPath(filePath) {
-            let imagetmp = try? NSData(contentsOfFile: filePath, options: .DataReadingMappedIfSafe)
+        let file = FileManager.default
+        if file.fileExists(atPath: filePath) {
+            let imagetmp = try? Data(contentsOf: URL(fileURLWithPath: filePath), options: .mappedIfSafe)
             image = UIImage(data: imagetmp!)!
         }
         else if online {
-            let imgData = try? NSData(contentsOfURL: url1, options: .DataReadingMappedIfSafe)
-            imgData!.writeToFile(filePath, atomically: true)
+            let imgData = try? Data(contentsOf: url1, options: .mappedIfSafe)
+            try? imgData!.write(to: URL(fileURLWithPath: filePath), options: [.atomic])
             image = UIImage(data: imgData!)!
         }
         return image
     }
     
-    func getUrlX(x1: UInt, y1: UInt, z1: UInt) -> String {
+    func getUrlX(_ x1: UInt, y1: UInt, z1: UInt) -> String {
         let bbox = bboxFromXYZ(x1, y: y1, z: z1)
         let resolvedUrl = "\(self.url)&BBOX=\(bbox.left),\(bbox.bottom),\(bbox.right),\(bbox.top)"
         //       println("Url tile overlay \(resolvedUrl)")
@@ -144,43 +146,42 @@ class WMSTileOverlay: GMSTileLayer {
         return resolvedUrl
     }
     
-    func drawTileAtX(x: UInt, y: UInt, z: UInt, url: String, receiver: GMSTileReceiver) {
+    func drawTileAtX(_ x: UInt, y: UInt, z: UInt, url: String, receiver: GMSTileReceiver) {
         let image = tileLoad(url, online: false)
-        receiver.receiveTileWithX(x, y: y, zoom: z, image: image)
+        receiver.receiveTileWith(x: x, y: y, zoom: z, image: image)
     }
     
-    override func requestTileForX(x: UInt, y: UInt, zoom: UInt, receiver: GMSTileReceiver!) {
+    override func requestTileFor(x: UInt, y: UInt, zoom: UInt, receiver: GMSTileReceiver!) {
         let urlStr = self.getUrlX(x, y1: y, z1: zoom)
         if urlStr == "" {
             print("URL Evaluation error")
-            receiver.receiveTileWithX(x, y: y, zoom: zoom, image: kGMSTileLayerNoTile)
+            receiver.receiveTileWith(x: x, y: y, zoom: zoom, image: kGMSTileLayerNoTile)
             return
         }
-        let url1 = NSURL(string: url)!
+        let url1 = URL(string: url)!
         let filePath = getFilePathForURL(url1, folderName: TILE_CACHE)
         // check if cached
-        let file = NSFileManager.defaultManager()
-        if file.fileExistsAtPath(filePath) {
+        let file = FileManager.default
+        if file.fileExists(atPath: filePath) {
             self.drawTileAtX(x, y: y, z: zoom, url: urlStr, receiver: receiver)
             return
         }
         else {
-            let url = NSURL(string: urlStr)!
-            let request = NSMutableURLRequest(URL: url)
-            request.HTTPMethod = "GET"
+            let url = URL(string: urlStr)!
+            let request = NSMutableURLRequest(url: url)
+            request.httpMethod = "GET"
             
-            let session = NSURLSession.sharedSession()
-            session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
-                
-                if error != nil {
+            let task = URLSession.shared.dataTask(with: request as URLRequest){ data,response,error in
+                if error != nil{
                     print("Error downloading tile")
-                    receiver.receiveTileWithX(x, y: y, zoom: zoom, image: kGMSTileLayerNoTile)
+                    receiver.receiveTileWith(x: x, y: y, zoom: zoom, image: kGMSTileLayerNoTile)
                 }
                 else {
-                    data!.writeToFile(filePath, atomically: true)
+                    try? data!.write(to: URL(fileURLWithPath: filePath), options: [.atomic])
                     self.drawTileAtX(x, y: y, z: zoom, url: urlStr, receiver: receiver)
                 }
-            }).resume()
+            }
+            task.resume()
             
         }
         
